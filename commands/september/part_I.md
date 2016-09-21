@@ -37,6 +37,7 @@ getpapers -q '(PUB_YEAR:[2000 TO 2016]) AND INTRO:"cancer invasion" AND TITLE:"c
 getpapers -q '(PUB_YEAR:[2000 TO 2016]) AND INTRO:"cancer invasion" AND RESULTS:"in vitro" AND TITLE:"cell migration"' -o cell_mig -n -> 62
 
 **For now, I decided to work with the following query:**
+
 getpapers -q '(PUB_YEAR:[2000 TO 2016]) AND RESULTS:"in vitro" AND TITLE:"cell migration"' -o cell_mig -n
 677 papers are retrieved.
 *****************************************************************************************************************
@@ -49,7 +50,9 @@ PMC4948956 and PMC3300687 were not OA (671 downloaded out of 673 requested)
 
 
 ├── PMC4981866
+
 │   ├── eupmc_result.json
+
 │   └── fulltext.xml
 
 
@@ -61,10 +64,15 @@ norma --project cell_mig -i fulltext.xml -o scholarly.html --transform nlm2html
 	!UNKNOWN: alt-text: Supplemental Table S2
 
 tree cell_mig
+
 └── PMC524493
+
     ├── eupmc_result.json
+    
     ├── fulltext.xml
+    
     └── scholarly.html
+    
 
 **Use the ami2-word plugin to extract word frequencies from the downloaded texts:**
 ami2-word
@@ -85,11 +93,15 @@ cell_mig/PMC2199208
 cell_mig/PMC3300687
 cell_mig/PMC4948956
 
-Some stopwords files are available at: https://github.com/ContentMine/ami/tree/master/src/main/resources/org/xmlcml/ami2/plugins/word/stop-words-collection-2014-02-24/stop-words
+Some stopwords files are available at:
+https://github.com/ContentMine/ami/tree/master/src/main/resources/org/xmlcml/ami2/plugins/word/stop-words-collection-2014-02-24/stop-words
 
-I created my own stopword file ("stopwords_eng.txt")
+I created my own stopword file ("stopwords_eng.txt"):
+
 ami2-word --project cell_mig --w.words wordFrequencies --w.stopwords stopwords_eng.txt
 
 Here something seems to go wrong... the stopword stream cannot be parsed:
+
 0    [main] DEBUG org.xmlcml.ami2.wordutil.WordSetWrapper  - symbol expands to: /org/xmlcml/ami2/wordutil/stopwords_eng.txt
+
 2    [main] WARN  org.xmlcml.ami2.wordutil.WordSetWrapper  - Cannot read stopword stream: /org/xmlcml/ami2/wordutil/stopwords_eng.txt
