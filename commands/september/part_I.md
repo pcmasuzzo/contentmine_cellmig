@@ -43,6 +43,7 @@ getpapers -q '(PUB_YEAR:[2000 TO 2016]) AND RESULTS:"in vitro" AND TITLE:"cell m
 **677 papers are retrieved**.
 *****************************************************************************************************************
 getpapers -q '(PUB_YEAR:[2000 TO 2016]) AND RESULTS:"in vitro" AND TITLE:"cell migration"' -o cell_mig -x
+	
 	searching using eupmc API (by default)
 	download XML results
 
@@ -95,6 +96,7 @@ cell_mig/PMC3300687
 cell_mig/PMC4948956
 
 Some stopwords files are available at:
+
 https://github.com/ContentMine/ami/tree/master/src/main/resources/org/xmlcml/ami2/plugins/word/stop-words-collection-2014-02-24/stop-words
 
 I created my own stopword file ("stopwords_eng.txt"):
