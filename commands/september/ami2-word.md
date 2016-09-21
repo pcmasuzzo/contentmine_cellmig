@@ -1,4 +1,5 @@
 **This file explains how to use _your own_ stop-words file in the _ami2_ plugin of the ContentMine pipeline**
+
  At first, I thought I would just run:
 
  ami2-word --project cell_mig --w.words wordFrequencies --w.stopwords stopwords_eng.txt
