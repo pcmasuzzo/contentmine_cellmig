@@ -10,9 +10,9 @@
 
  - go to _/usr/share/ami-repo/repo/ami2-0.1-SNAPSHOT.jar_ (this name can change depending on your _ami_ version); make sure you have the proper rights and download this .jar file, so that you can modify it.
 
- Add your stop-words file to this jar folder, exactly in the location: _ami2-0.1-SNAPSHOT.jar/ami-/org/xmlcml/ami2/wordutil/_
+ - Add your stop-words file to this jar folder, exactly in the location: _ami2-0.1-SNAPSHOT.jar/ami-/org/xmlcml/ami2/wordutil/_
 
- Then simply replace your jar file with the new one:
+ - Then simply replace your jar file with the new one:
 
  _sudo mv new_ami_file.jar /usr/share/ami-repo/repo/ami2-0.1-SNAPSHOT.jar_
 
