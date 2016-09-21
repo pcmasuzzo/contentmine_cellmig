@@ -39,7 +39,8 @@ getpapers -q '(PUB_YEAR:[2000 TO 2016]) AND INTRO:"cancer invasion" AND RESULTS:
 **For now, I decided to work with the following query:**
 
 getpapers -q '(PUB_YEAR:[2000 TO 2016]) AND RESULTS:"in vitro" AND TITLE:"cell migration"' -o cell_mig -n
-677 papers are retrieved.
+
+**677 papers are retrieved**.
 *****************************************************************************************************************
 getpapers -q '(PUB_YEAR:[2000 TO 2016]) AND RESULTS:"in vitro" AND TITLE:"cell migration"' -o cell_mig -x
 	searching using eupmc API (by default)
